@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RJ EXPORT | Premium Betel Leaves, Banana Leaves, Banana & Betel Nuts</title>
+  <meta name="description" content="RJ EXPORT - Trusted exporter and importer of premium quality Betel Leaves, Banana Leaves, Fresh Banana and Betel Nuts. Farm fresh to global markets." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a5f2a;
+      --primary-dark: #0f3d1a;
+      --primary-light: #2d8a45;
+      --accent: #c9a227;
+      --accent-light: #e8c547;
+      --text: #1a1a1a;
+      --text-light: #555;
+      --bg: #fafaf8;
+      --white: #ffffff;
+      --card-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 12px 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--white);
+    }
+
+    .navbar.scrolled .logo {
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .navbar.scrolled .nav-links a {
+      color: var(--text);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+    .navbar.scrolled .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 28px;
+      height: 20px;
+      position: relative;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2.5px;
+      background: white;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    .navbar.scrolled .menu-toggle span {
+      background: var(--primary);
+    }
+
+    .menu-toggle span:nth-child(1) { top: 0; }
+    .menu-toggle span:nth-child(2) { top: 9px; }
+    .menu-toggle span:nth-child(3) { top: 18px; }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f3d1a 0%, #1a5f2a 40%, #2d8a45 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(201,162,39,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 520px;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201,162,39,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 32px;
+      color: white;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .stat-item h3 {
+      font-size: 2rem;
+      color: var(--accent-light);
+      margin-bottom: 4px;
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* ========== PRODUCTS ========== */
+    .section {
+      padding: 100px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header .label {
+      display: inline-block;
+      background: rgba(26,95,42,0.1);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s ease;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .product-img {
+      height: 220px;
+      background: #e8f5e9;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.06);
+    }
+
+    .product-body {
+      padding: 24px;
+    }
+
+    .product-body h3 {
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .product-body p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .product-tag {
+      display: inline-block;
+      background: rgba(26,95,42,0.08);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-size: 2.4rem;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-light);
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .features-list {
+      margin-top: 28px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(26,95,42,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .feature-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, #1a5f2a, #2d8a45);
+      border-radius: 24px;
+      padding: 48px 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 300px;
+      height: 300px;
+      background: rgba(201,162,39,0.2);
+      border-radius: 50%;
+    }
+
+    .about-visual h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .about-visual p {
+      opacity: 0.9;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* ========== WHY US ========== */
+    .why-us {
+      background: linear-gradient(180deg, #f0f7f1 0%, var(--bg) 100%);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .why-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .why-card h3 {
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+    }
+
+    .contact-info h2 {
+      font-size: 2.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+
+    .contact-info > p {
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-item .icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(26,95,42,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    .whatsapp-float .tooltip {
+      position: absolute;
+      right: 70px;
+      background: #075E54;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+
+    .whatsapp-float:hover .tooltip {
+      opacity: 1;
+    }
+
+    .contact-form {
+      background: var(--bg);
+      padding: 36px;
+      border-radius: 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      background: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      opacity: 0.8;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+      color: var(--accent-light);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 140px;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        gap: 16px;
+      }
+
+      .nav-links.active a {
+        color: var(--text) !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">RJ</div>
+        <div>
+          <span>RJ EXPORT</span>
+          <small style="display:block; font-size:0.65rem; font-weight:500; opacity:0.85; letter-spacing:0.3px;"></small>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Premium Quality<br><span>Leaves & Nuts</span><br>to the World</h1>
+        <p>Premium bulk supplier of betel leaves and banana leaves for global wholesale distribution. Export quality guaranteed, worldwide delivery.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">View Products</a>
+          <a href="#contact" class="btn btn-outline">Get a Quote</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <h3 style="font-size:1.4rem; margin-bottom:8px;">Exporting Nature’s Best</h3>
+          <p style="opacity:0.85; font-size:0.95rem;">From Indian farms to global markets — quality you can trust.</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Natural Produce</p>
+            </div>
+            <div class="stat-item">
+              <h3>Global</h3>
+              <p>Export Network</p>
+            </div>
+            <div class="stat-item">
+              <h3>Fresh</h3>
+              <p>Farm to Port</p>
+            </div>
+            <div class="stat-item">
+              <h3>Trusted</h3>
+              <p>Quality Assured</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">OUR PRODUCTS</span>
+        <h2>What We Export & Import</h2>
+        <p>Carefully selected premium agricultural products sourced from the best farms and delivered with excellence.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="images/betel-leaves-bundle.jpg" alt="Fresh Betel Leaves - RJ EXPORT" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Betel Leaves</h3>
+            <p>Fresh, aromatic betel leaves known for their quality, freshness and traditional value. Ideal for export markets.</p>
+            <span class="product-tag">Export Ready</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="images/banana-leaves-close.jpg" alt="Banana Leaves - RJ EXPORT" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Banana Leaves</h3>
+            <p>Large, clean banana leaves perfect for packaging, traditional use and commercial purposes worldwide.</p>
+            <span class="product-tag">Premium Grade</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="images/banana-plant.jpg" alt="Fresh Banana - RJ EXPORT" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Fresh Banana</h3>
+            <p>High-quality bananas harvested at the right stage for maximum shelf life and taste during export.</p>
+            <span class="product-tag">Farm Fresh</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="images/betel-plant.jpg" alt="Betel Nuts - RJ EXPORT" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Betel Nuts</h3>
+            <p>Premium grade betel nuts (areca nuts) carefully selected and processed for international markets.</p>
+            <span class="product-tag">Top Quality</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="label">ABOUT RJ EXPORT</span>
+          <h2>Your Reliable Partner in Agricultural Trade</h2>
+          <p>RJ EXPORT is a premium bulk supplier of betel leaves and banana leaves for global wholesale distribution. We also deal in fresh bananas and betel nuts.</p>
+          <p>Based in Thanjavur, Tamil Nadu, we focus on export quality, reliable worldwide delivery and transparent business practices. By the grace of Saint Joseph, we serve customers across the globe.</p>
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <h4>Direct Farm Sourcing</h4>
+                <p>We work closely with farmers to ensure the best quality produce.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <h4>Quality Control</h4>
+                <p>Strict checking at every stage before shipment.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <h4>Global Shipping</h4>
+                <p>Reliable logistics support for on-time delivery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <h3>Why Businesses Choose Us</h3>
+          <p>We combine traditional agricultural excellence with modern export standards to deliver consistent quality every time.</p>
+          <div class="trust-badges">
+            <span class="badge">Quality Assured</span>
+            <span class="badge">Timely Delivery</span>
+            <span class="badge">Fair Pricing</span>
+            <span class="badge">Transparent Process</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why-us" id="why">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">WHY CHOOSE US</span>
+        <h2>What Makes RJ EXPORT Different</h2>
+        <p>We focus on quality, reliability and long-term partnerships.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌱</div>
+          <h3>Premium Quality</h3>
+          <p>Only the best grade produce is selected after careful inspection for export standards.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚚</div>
+          <h3>Reliable Logistics</h3>
+          <p>Strong network ensuring safe and timely delivery to international destinations.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Trusted Partnership</h3>
+          <p>Transparent communication and honest business practices with every client.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📦</div>
+          <h3>Custom Orders</h3>
+          <p>Flexible packaging and order quantities to meet your specific requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="label">GET IN TOUCH</span>
+          <h2>Let’s Start Trading</h2>
+          <p>Interested in our products or want to discuss a bulk order? Reach out to us — we respond quickly.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:fernandas8825@gmail.com">fernandas8825@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon">📱</div>
+              <div>
+                <h4>Phone / WhatsApp</h4>
+                <p>
+                  <a href="https://wa.me/916383424154" target="_blank">+91 63834 24154</a><br>
+
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon">📍</div>
+              <div>
+                <h4>Address</h4>
+                <p>49/9 Thoppu Street, Manathidal,<br>Thanjavur, Tamil Nadu, India</p>
+              </div>
+            </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" required placeholder="Full name" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="you@company.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" placeholder="+91 63834 24154" />
+            </div>
+            <div class="form-group">
+              <label>Interested In</label>
+              <select name="product">
+                <option value="">Select product</option>
+                <option>Betel Leaves</option>
+                <option>Banana Leaves</option>
+                <option>Fresh Banana</option>
+                <option>Betel Nuts</option>
+                <option>Multiple Products</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" placeholder="Tell us about your requirements, quantity, destination country..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">RJ</div>
+          <div>
+            <span>RJ EXPORT</span>
+            <small style="display:block; font-size:0.65rem; font-weight:500; opacity:0.75;"></small>
+          </div>
+        </a>
+        <p>Premium bulk supplier of betel leaves and banana leaves for global wholesale distribution. Export quality guaranteed, worldwide delivery.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Betel Leaves</a></li>
+          <li><a href="#products">Banana Leaves</a></li>
+          <li><a href="#products">Fresh Banana</a></li>
+          <li><a href="#products">Betel Nuts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:fernandas8825@gmail.com">fernandas8825@gmail.com</a></li>
+          <li><a href="https://wa.me/916383424154" target="_blank">+91 63834 24154</a></li>
+       
+          <li>49/9 Thoppu Street, Manathidal</li>
+          <li>Thanjavur, Tamil Nadu, India</li>
+        
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RJ EXPORT. All rights reserved</p>
+     
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/916383424154?text=Hi%20RJ%20EXPORT%2C%20I%20am%20interested%20in%20your%20products." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <span class="tooltip">Chat with us</span>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 2.824.736 5.582 2.134 8.01L.7 30.72l6.918-1.814A15.94 15.94 0 0016.004 32C24.826 32 32 24.822 32 15.996 32 7.176 24.826 0 16.004 0zm9.27 22.612c-.39 1.1-2.284 2.014-3.15 2.148-.79.122-1.79.174-2.888-.174-.666-.21-1.52-.49-2.61-.958-4.586-1.98-7.57-6.58-7.802-6.884-.226-.306-1.866-2.484-1.866-4.74 0-2.256 1.184-3.368 1.604-3.828.39-.426.916-.55 1.222-.55.306 0 .612.004.88.016.282.014.66-.106 1.032.79.39.94 1.324 3.24 1.44 3.474.118.234.198.508.04.822-.154.318-.232.516-.458.794-.226.278-.476.62-.68.832-.226.234-.46.486-.198.954.262.468 1.164 1.92 2.5 3.11 1.716 1.53 3.164 2.004 3.612 2.23.448.226.71.19.972-.114.262-.306 1.124-1.31 1.424-1.76.3-.448.6-.374.998-.224.4.15 2.532 1.194 2.966 1.412.434.218.722.326.828.508.106.182.106 1.054-.284 2.154z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Form handling
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const name = data.get('name');
+      const phone = data.get('phone') || '';
+      const product = data.get('product') || '';
+      const message = data.get('message') || '';
+
+      // Open WhatsApp with pre-filled message
+      const text = encodeURIComponent(
+        `Hi RJ EXPORT,\n\nName: ${name}\nPhone: ${phone}\nInterested in: ${product}\n\nMessage: ${message}`
+      );
+      window.open(`https://wa.me/916383424154?text=${text}`, '_blank');
+      
+      form.reset();
+    }
+  </script>
+</body>
+</html>
